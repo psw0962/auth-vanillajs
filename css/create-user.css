@@ -1,6 +1,8 @@
+html,
 body {
   background: url(../images/background/background.svg) no-repeat fixed;
   background-position: right bottom;
+  height: 100%;
 }
 
 p {
@@ -21,7 +23,7 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 221px;
+  margin-top: 150px;
 }
 
 .head {
@@ -140,9 +142,22 @@ input::placeholder {
   cursor: pointer;
 }
 
-.find-pw{
+.find-pw {
+  display: flex;
+  gap: 6px;
   margin-top: 25px;
-} span {
+}
+
+.reset-pw-desc {
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 21px;
+  color: #727172;
+}
+
+.reset-pw {
   font-family: Noto Sans KR;
   font-style: normal;
   font-weight: normal;
@@ -150,4 +165,4 @@ input::placeholder {
   line-height: 21px;
   color: #ea002b;
   cursor: pointer;
-  }
+}

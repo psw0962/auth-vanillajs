@@ -1,6 +1,8 @@
+html,
 body {
   background: url(../images/background/background.svg) no-repeat fixed;
   background-position: right bottom;
+  height: 100%;
 }
 
 p {
@@ -12,7 +14,7 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 221px;
+  margin-top: 150px;
 }
 
 .head {
