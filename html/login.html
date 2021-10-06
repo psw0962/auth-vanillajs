@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>DIP Portal</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIP Portal</title>
 
-        <link href="../css/login.css" rel="stylesheet" type="text/css"/>
-</head>
-<body>
+    <link href="../css/login.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
     <div class="background">
-            <section class="head">DIP Portal</section>
+      <section class="head">DIP Portal</section>
 
-        <section class="main">
-                <p class="title">사용자 로그인</p>
+      <section class="main">
+        <p class="title">사용자 로그인</p>
 
-                <p class="desc">로그인 방식을 선택해 주세요.
-                </br>
-                사용 신청을 눌러주세요.</p>
+        <p class="desc">서비스를 이용하시려면 로그인이 필요합니다.</br>아이디와 비밀번호를 입력해주세요.</p>
 
-            <div class="user-auth">
-                <img src="../images/login/userauth.svg"/>
-                <p>사용자 인증</p>
-            </div>
+        <div class="id-box">
+          <p class="sub-title">아이디</p>
+          <input class="user-info" placeholder="••••••@sk.com" />
+        </div>
 
-            <div class="sub-box">
-                <img src="../images/login/idpw.svg"/>
-                <p>ID/PW 로그인</p>
-            </div>
+        <div class="pw-box">
+          <p class="sub-title">비밀번호</p>
+          <input
+            class="user-info"
+            type="password"
+            placeholder="패스워드를 입력해 주세요."
+          />
+        </div>
 
-            <div class="first-visit">
-                <img src="../images/login/line.svg"/>
-                <p class="first-visit-text">처음 방문 이신가요?</p>
-                <img src="../images/login/line.svg"/>
-            </div>
+        <button class="login-btn">로그인</button>
+      </section>
 
-            <div class="sub-box">
-                <img src="../images/login/createuser.svg"/>
-                <p>사용 신청</p>
-            </div>
-        </section>
+      <div class="create-user">
+        <p class="guide-desc">처음 방문 이신가요?</p>
+        <p class="guide-desc-btn" onclick="location='create-user.html'">사용신청</p>
+      </div>
+
+      <div class="reset-pw">
+        <p class="guide-desc">비밀번호가 생각나지 않으세요?</p>
+        <p class="guide-desc-btn" onclick="location='reset-pw-auth.html'">비밀번호 초기화</p>
+      </div>
     </div>
-</body>
+  </body>
 </html>

@@ -1,5 +1,6 @@
 html,
 body {
+  margin: 0;
   background: url(../images/background/background.svg) no-repeat fixed;
   background-position: right bottom;
   height: 100%;
@@ -7,6 +8,15 @@ body {
 
 p {
   margin: 0;
+}
+
+input::placeholder {
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 21px;
+  color: #b5b5b6;
 }
 
 .background {
@@ -58,71 +68,134 @@ p {
   color: #231815;
 }
 
+.sub-title {
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 21px;
+  color: #727172;
+}
+
 .desc {
-  text-align: center;
-  margin-top: 10px;
-  color: #ff619a;
-}
-
-.user-auth {
-  width: 344px;
-  height: 65px;
-
-  display: flex;
-  align-items: center;
-  gap: 18px;
-
-  margin-top: 36px;
-  padding-left: 27px;
-  border: 1px solid #e4e4e4;
-  box-sizing: border-box;
-  border-radius: 5px;
-  cursor: pointer;
-
-  font-family: Noto Sans KR;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 28px;
-  color: #231815;
-}
-
-.sub-box {
-  width: 344px;
-  height: 65px;
-
-  display: flex;
-  align-items: center;
-  gap: 18px;
-
-  margin-top: 20px;
-  padding-left: 27px;
-  border: 1px solid #e4e4e4;
-  box-sizing: border-box;
-  border-radius: 5px;
-  cursor: pointer;
-
-  font-family: Noto Sans KR;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 28px;
-  color: #231815;
-}
-
-.first-visit {
-  width: 344px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 26px;
-}
-
-.first-visit-text {
   font-family: Noto Sans KR;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
-  line-height: 20px;
+  line-height: 21px;
   text-align: center;
+  color: #ff619a;
+  margin-top: 10px;
+}
+
+.id-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 36px;
+}
+
+.user-info {
+  width: 344px;
+  height: 36px;
+  margin-top: 8px;
+  padding-left: 15px;
+
+  border: 1px solid #e4e4e4;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.pw-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 21px;
+}
+
+.user-pw-confirm {
+  width: 344px;
+  height: 36px;
+  margin-top: 20px;
+  padding-left: 15px;
+
+  border: 1px solid #e4e4e4;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 89px;
+  height: 36px;
+  margin-top: 25px;
+  background: #ea002b;
+  border-radius: 5px;
+  border: none;
+
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.create-user {
+  display: flex;
+  gap: 6px;
+  margin-top: 25px;
+}
+
+.guide-desc {
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 21px;
   color: #727172;
+}
+
+.guide-desc-btn {
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 21px;
+  color: #ea002b;
+  cursor: pointer;
+}
+
+.reset-pw {
+  display: flex;
+  gap: 6px;
+  margin-top: 7px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0px 18px 0px 18px;
+  }
+
+  .head {
+    width: 100%;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .id-box {
+    width: 90%;
+  }
+
+  .pw-box {
+    width: 90%;
+  }
+
+  .user-info {
+    width: 100%;
+  }
 }

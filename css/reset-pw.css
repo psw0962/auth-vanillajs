@@ -51,8 +51,7 @@ input::placeholder {
   flex-direction: column;
 
   width: 416px;
-  height: 100%;
-  padding: 36px 0px 36px 0px;
+  height: 463px;
   background-color: #ffffff;
 
   border: 1px solid #e4e4e4;
@@ -80,39 +79,25 @@ input::placeholder {
 
 .desc {
   margin-top: 10px;
-  color: #727172;
   font-family: Noto Sans KR;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 21px;
   text-align: center;
+  color: #ff619a;
 }
 
-.create-id {
+.new-pw {
   display: flex;
   flex-direction: column;
   margin-top: 36px;
 }
 
-.invalid {
+.new-pw-confirm {
   display: flex;
-  align-items: center;
-  gap: 6px;
-
-  width: 344px;
-  margin-top: 19px;
-}
-
-.invalid-text {
-  margin-top: 3px;
-
-  font-family: Noto Sans KR;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 18px;
-  color: #ff619a;
+  flex-direction: column;
+  margin-top: 28px;
 }
 
 .user-info {
@@ -126,28 +111,11 @@ input::placeholder {
   border-radius: 5px;
 }
 
-.create-pw {
-  display: flex;
-  flex-direction: column;
-  margin-top: 21px;
-}
-
-.user-pw-confirm {
-  width: 344px;
-  height: 36px;
-  margin-top: 20px;
-  padding-left: 15px;
-
-  border: 1px solid #e4e4e4;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-
-.create-user-btn {
+.update-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 89px;
+  width: 86px;
   height: 36px;
   margin-top: 25px;
   background: #ea002b;
@@ -164,31 +132,6 @@ input::placeholder {
   cursor: pointer;
 }
 
-.find-pw {
-  display: flex;
-  gap: 6px;
-  margin-top: 25px;
-}
-
-.reset-pw-desc {
-  font-family: Noto Sans KR;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 21px;
-  color: #727172;
-}
-
-.reset-pw {
-  font-family: Noto Sans KR;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 21px;
-  color: #ea002b;
-  cursor: pointer;
-}
-
 @media screen and (max-width: 768px) {
   body {
     padding: 0px 18px 0px 18px;
@@ -202,23 +145,15 @@ input::placeholder {
     width: 100%;
   }
 
-  .create-id {
+  .new-pw {
     width: 90%;
   }
 
-  .create-pw {
-    width: 90%;
-  }
-
-  .invalid {
+  .new-pw-confirm {
     width: 90%;
   }
 
   .user-info {
-    width: 100%;
-  }
-
-  .user-pw-confirm {
     width: 100%;
   }
 }

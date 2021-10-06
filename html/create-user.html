@@ -7,25 +7,43 @@
         <title>DIP Portal</title>
 
         <link href="../css/create-user.css" rel="stylesheet" type="text/css"/>
+        <script src="../javascript/create-user-invalid.js"></script>
     </head>
-    <body>
+    <body onload="emailInvalid()">
         <div class="background">
             <section class="head">DIP Portal</section>
 
             <section class="main">
-                    <p class="title">사용 신청</p>
+                <p class="title">사용 신청</p>
 
-                    <p class="desc">DIP Portal은 Data Intelligence Platform 을</br>손쉽게 활용할 수 있는 웹 서비스 입니다.</p>
+                <p class="desc">DIP Portal은 Data Intelligence Platform 을</br>손쉽게 활용할 수 있는 웹 서비스 입니다.</p>
 
                 <div class="create-id">
-                    <p class="sub-heading">아이디</p>
+                    <p class="sub-title">아이디</p> 
                     <input class="user-info" placeholder="••••••@sk.com"/>
                 </div>
 
+                <div class="invalid">
+                    <img src="../images/create-user/warning.svg" />
+                    <p class="invalid-text">올바른 이메일 형식이 아닙니다.</p>
+                </div>
+
                 <div class="create-pw">
-                    <p class="sub-heading">신규 비밀번호</p>
+                    <p class="sub-title">신규 비밀번호</p>
                     <input class="user-info" type="password" placeholder="새 비밀번호를 입력해 주세요."/>
+
+                    <div class="invalid">
+                        <img src="../images/create-user/warning.svg" />
+                        <p class="invalid-text">비밀번호는 8~16자리 특수문자를 포함해야 합니다.</p>
+                    </div>
+
+
                     <input class="user-pw-confirm" type="password" placeholder="같은 비밀번호를 입력해 주세요."/>
+                </div>
+
+                <div class="invalid">
+                    <img src="../images/create-user/warning.svg" />
+                    <p class="invalid-text">PW가 불일치 합니다.</p>
                 </div>
 
                 <button class="create-user-btn">사용 신청</button>
@@ -33,7 +51,7 @@
 
             <div class="find-pw">
                 <p class="reset-pw-desc">비밀번호가 생각나지 않으세요?</p> 
-                <p class="reset-pw">비밀번호 초기화</p>
+                <p class="reset-pw" onclick="location='reset-pw-auth.html'">비밀번호 초기화</p>
             </div>
         </div>
     </body>

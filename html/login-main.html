@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>DIP Portal</title>
+
+        <link href="../css/login-main.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="background">
+            <section class="head">DIP Portal</section>
+
+            <section class="main">
+                <p class="title">사용자 로그인</p>
+
+                <p class="desc">서비스를 이용하시려면 로그인 해주세요.
+                </br>
+                로그인 방식을 선택하세요.</p>
+
+                <div class="user-auth" onclick="location='auth-loading-modal.html'">
+                    <img src="../images/login/userauth.svg"/>
+                    <p>사용자 인증</p>
+                </div>
+
+                <div class="sub-box" onclick="location='login.html'">
+                    <img src="../images/login/idpw.svg"/>
+                    <p>ID/PW 로그인</p>
+                </div>
+
+                <div class="first-visit">
+                    <img class="line" src="../images/login/line.svg"/>
+                    <p class="first-visit-text">처음 방문 이신가요?</p>
+                    <img class="line" src="../images/login/line.svg"/>
+                </div>
+
+                <div class="sub-box" onclick="location='create-user.html'">
+                    <img src="../images/login/createuser.svg"/>
+                    <p>사용 신청</p>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
