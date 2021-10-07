@@ -7,9 +7,9 @@
         <title>DIP Portal</title>
 
         <link href="../css/create-user.css" rel="stylesheet" type="text/css"/>
-        <script src="../javascript/create-user-invalid.js"></script>
+        <script src="../javascript/invalidHandler.js"></script>
     </head>
-    <body onload="emailInvalid()">
+    <body>
         <div class="background">
             <section class="head">DIP Portal</section>
 
@@ -20,30 +20,34 @@
 
                 <div class="create-id">
                     <p class="sub-title">아이디</p> 
-                    <input class="user-info" placeholder="••••••@sk.com"/>
+                    <input onkeyup="emailInvalidCheck('.email-info', '.invalid-email')" class="email-info" placeholder="••••••@sk.com"/>
                 </div>
 
-                <div class="invalid">
+                <div class="invalid-email">
                     <img src="../images/create-user/warning.svg" />
                     <p class="invalid-text">올바른 이메일 형식이 아닙니다.</p>
                 </div>
 
                 <div class="create-pw">
                     <p class="sub-title">신규 비밀번호</p>
-                    <input class="user-info" type="password" placeholder="새 비밀번호를 입력해 주세요."/>
+                    <input onkeyup="pwInvalidCheck('.pw-info', '.invalid-pw')" class="pw-info" type="password" placeholder="새 비밀번호를 입력해 주세요."/>
 
-                    <div class="invalid">
+                    <div class="invalid-pw">
                         <img src="../images/create-user/warning.svg" />
-                        <p class="invalid-text">비밀번호는 8~16자리 특수문자를 포함해야 합니다.</p>
+                        <p class="invalid-text">비밀번호는 영문, 숫자, 특수문자 포함</br> 8자 이상 이어야 합니다. </p>
                     </div>
 
-
-                    <input class="user-pw-confirm" type="password" placeholder="같은 비밀번호를 입력해 주세요."/>
+                    <input onkeyup="pwConfirmInvalidCheck('.pw-info', '.pw-confirm-info', '.invalid-pw-confirm')" class="pw-confirm-info" type="password" placeholder="같은 비밀번호를 입력해 주세요."/>
                 </div>
 
-                <div class="invalid">
+                <div class="invalid-pw-confirm">
                     <img src="../images/create-user/warning.svg" />
                     <p class="invalid-text">PW가 불일치 합니다.</p>
+                </div>
+
+                <div class="signedup-warning">
+                    <img src="../images/create-user/warning.svg" />
+                    <p class="invalid-text">이미 가입한 계정입니다.</p>
                 </div>
 
                 <button class="create-user-btn">사용 신청</button>

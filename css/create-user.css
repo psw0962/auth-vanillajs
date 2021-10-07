@@ -19,6 +19,10 @@ input::placeholder {
   color: #b5b5b6;
 }
 
+input:focus {
+  outline-color: #727172;
+}
+
 .background {
   display: flex;
   justify-content: center;
@@ -95,8 +99,35 @@ input::placeholder {
   margin-top: 36px;
 }
 
-.invalid {
-  display: flex;
+.invalid-email {
+  display: none;
+  align-items: center;
+  gap: 6px;
+
+  width: 344px;
+  margin-top: 19px;
+}
+
+.invalid-pw {
+  display: none;
+  align-items: center;
+  gap: 6px;
+
+  width: 350px;
+  margin-top: 19px;
+}
+
+.invalid-pw-confirm {
+  display: none;
+  align-items: center;
+  gap: 6px;
+
+  width: 344px;
+  margin-top: 19px;
+}
+
+.signedup-warning {
+  display: none;
   align-items: center;
   gap: 6px;
 
@@ -115,7 +146,29 @@ input::placeholder {
   color: #ff619a;
 }
 
-.user-info {
+.email-info {
+  width: 344px;
+  height: 36px;
+  margin-top: 8px;
+  padding-left: 15px;
+
+  border: 1px solid #e4e4e4;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.pw-info {
+  width: 344px;
+  height: 36px;
+  margin-top: 8px;
+  padding-left: 15px;
+
+  border: 1px solid #e4e4e4;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.pw-confirm-info {
   width: 344px;
   height: 36px;
   margin-top: 8px;
@@ -210,11 +263,23 @@ input::placeholder {
     width: 90%;
   }
 
-  .invalid {
+  .invalid-email {
     width: 90%;
   }
 
-  .user-info {
+  .invalid-pw-confirm {
+    width: 90%;
+  }
+
+  .email-info {
+    width: 100%;
+  }
+
+  .pw-info {
+    width: 100%;
+  }
+
+  .pw-confirm-info {
     width: 100%;
   }
 

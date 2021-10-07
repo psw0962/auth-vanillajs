@@ -7,6 +7,7 @@
     <title>DIP Portal</title>
 
     <link href="../css/login.css" rel="stylesheet" type="text/css" />
+    <script src="../javascript/invalidHandler.js" ></script>
   </head>
   <body>
     <div class="background">
@@ -19,16 +20,26 @@
 
         <div class="id-box">
           <p class="sub-title">아이디</p>
-          <input class="user-info" placeholder="••••••@sk.com" />
+          <input onkeyup="emailInvalidCheck('.email-info', '.invalid-email')" class="email-info" placeholder="••••••@sk.com" />
+        </div>
+
+        <div class="invalid-email">
+          <img src="../images/create-user/warning.svg" />
+          <p class="invalid-text">올바른 이메일 형식이 아닙니다.</p>
         </div>
 
         <div class="pw-box">
           <p class="sub-title">비밀번호</p>
           <input
-            class="user-info"
+            class="pw-info"
             type="password"
             placeholder="패스워드를 입력해 주세요."
           />
+        </div>
+
+        <div class="invalid-user-info">
+          <img src="../images/create-user/warning.svg" />
+          <p class="invalid-text">ID 또는 PW가 불일치 합니다.</p>
         </div>
 
         <button class="login-btn">로그인</button>

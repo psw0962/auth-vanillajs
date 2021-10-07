@@ -19,6 +19,14 @@ input::placeholder {
   color: #b5b5b6;
 }
 
+.email-info:focus {
+  outline-color: #727172;
+}
+
+.certification-input:focus {
+  outline: none;
+}
+
 .background {
   display: flex;
   justify-content: center;
@@ -51,7 +59,8 @@ input::placeholder {
   flex-direction: column;
 
   width: 416px;
-  height: 463px;
+  height: 100%;
+  padding: 36px 0px 36px 0px;
   background-color: #ffffff;
 
   border: 1px solid #e4e4e4;
@@ -85,7 +94,7 @@ input::placeholder {
   font-size: 15px;
   line-height: 21px;
   text-align: center;
-  color: #ff619a;
+  color: #727172;
 }
 
 .check-email {
@@ -94,7 +103,7 @@ input::placeholder {
   margin-top: 36px;
 }
 
-.user-info {
+.email-info {
   width: 344px;
   height: 36px;
   margin-top: 8px;
@@ -103,6 +112,35 @@ input::placeholder {
   border: 1px solid #e4e4e4;
   box-sizing: border-box;
   border-radius: 5px;
+}
+
+.invalid-text {
+  margin-top: 3px;
+
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  color: #ff619a;
+}
+
+.invalid-email {
+  display: none;
+  align-items: center;
+  gap: 6px;
+
+  width: 344px;
+  margin-top: 19px;
+}
+
+.fail-certification {
+  display: none;
+  align-items: center;
+  gap: 6px;
+
+  width: 350px;
+  margin-top: 19px;
 }
 
 .certification-num {
@@ -208,8 +246,12 @@ input::placeholder {
     width: 90%;
   }
 
-  .user-info {
+  .email-info {
     width: 100%;
+  }
+
+  .invalid-email {
+    width: 90%;
   }
 
   .inner-box {

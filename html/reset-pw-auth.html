@@ -7,6 +7,7 @@
         <title>DIP Portal</title>
 
         <link href="../css/reset-pw-auth.css" rel="stylesheet" type="text/css"/>
+        <script src="../javascript/invalidHandler.js"></script>
     </head>
     <body>
         <div class="background">
@@ -19,7 +20,12 @@
 
                 <div class="check-email">
                     <p class="sub-title">본인확인 (이메일)</p>
-                    <input class="user-info" placeholder="admin@sk.com"/>
+                    <input onkeyup="emailInvalidCheck('.email-info', '.invalid-email', '.send-num')" class="email-info" placeholder="이메일을 입력해주세요."/>
+                </div>
+
+                <div class="invalid-email">
+                    <img src="../images/create-user/warning.svg" />
+                    <p class="invalid-text">올바른 이메일 형식이 아닙니다.</p>
                 </div>
 
                 <button class="send-num">코드 보내기</button>
@@ -28,11 +34,16 @@
                     <p class="sub-title">인증번호</p>
 
                     <div class="inner-box">
-                        <input class="certification-input" type="password" placeholder="인증번호를 입력해주세요."/>
+                        <input onclick="BorderColorHandler('.inner-box')" onkeyup="certificationInvalidCheck('.certification-input', '.confirm-btn', '.inner-box')" class="certification-input" type="password" placeholder="인증번호를 입력해주세요."/>
 
                         <div class="time-remaining-box">
                             <p class="time-remaining">남은 시간 9:10</p>
                         </div>
+                    </div>
+
+                    <div class="fail-certification">
+                        <img src="../images/create-user/warning.svg" />
+                        <p class="invalid-text">인증에 실패했습니다. </br>인증번호를 확인해주시기 바랍니다.</p>
                     </div>
                 </div>
 
