@@ -76,12 +76,15 @@ function certificationInvalidCheck(certifiNumVal, confirmBtn) {
 }
 
 // certification
-function BorderColorHandler(item) {
+function BorderColorHandler(type, item) {
   const inputBorderColor = document.querySelector(item);
-  // inputBorderColor.style.border = "2px solid #727172";
+  console.log(type);
 
-  // if()
-  // if()
-  // inputBorderColor.style.border = "2px solid #727172";
-  // inputBorderColor.style.border = "1px solid #e4e4e4";
+  if (type === "onfocus") {
+    inputBorderColor.style.border = "2px solid #727172";
+  }
+
+  if (type === "onblur") {
+    inputBorderColor.style.border = "1px solid #e4e4e4";
+  }
 }

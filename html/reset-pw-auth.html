@@ -34,7 +34,7 @@
                     <p class="sub-title">인증번호</p>
 
                     <div class="inner-box">
-                        <input onclick="BorderColorHandler('.inner-box')" onkeyup="certificationInvalidCheck('.certification-input', '.confirm-btn', '.inner-box')" class="certification-input" type="password" placeholder="인증번호를 입력해주세요."/>
+                        <input onblur="BorderColorHandler('onblur', '.inner-box')" onfocus="BorderColorHandler('onfocus' ,'.inner-box')" onkeyup="certificationInvalidCheck('.certification-input', '.confirm-btn', '.inner-box')" class="certification-input" type="password" placeholder="인증번호를 입력해주세요."/>
 
                         <div class="time-remaining-box">
                             <p class="time-remaining">남은 시간 9:10</p>
