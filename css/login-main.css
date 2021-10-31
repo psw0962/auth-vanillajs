@@ -1,8 +1,8 @@
 html,
 body {
   margin: 0;
-  background: url(../images/background/background.svg) no-repeat fixed;
-  background-position: right bottom;
+  /* background: url(../images/background/background.svg) no-repeat fixed;
+  background-position: right bottom; */
   height: 100%;
 }
 
@@ -25,7 +25,7 @@ p {
 
   width: 416px;
   height: 114px;
-  background-color: #ea002b;
+  background-color: #2734b3;
 
   font-family: Noto Sans;
   font-style: normal;
